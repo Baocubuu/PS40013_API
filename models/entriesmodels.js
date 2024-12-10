@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-// Định nghĩa schema cho Person
-const personSchema = new schema({
+const entriesSchema = new schema({
   id: {
     type: String,
     required: true,
@@ -22,7 +21,6 @@ const personSchema = new schema({
   },
 });
 
-// Tạo model từ schema
-const Person = mongoose.model('entries', entriesSchema);
+const entries = mongoose.model('entries', entriesSchema);
 
 module.exports = entries;
