@@ -8,7 +8,7 @@ router.get('/list', async (req, res) => {
 
   try {
     
-    const results = await entries.find({
+    const results = await entries .find({
       nationality: nationality,
       date: { $gte: parseInt(date) }, 
     });
@@ -19,7 +19,7 @@ router.get('/list', async (req, res) => {
       data: results,
     });
   } catch (error) {
-    console.error(error);
+    console.error(error); // In lỗi ra console
     res.status(500).json({
       success: false,
       message: 'Internal Server Error',

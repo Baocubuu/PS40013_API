@@ -16,7 +16,7 @@ const entriesSchema = new schema({
     required: true,
   },
   date: {
-    type: String,
+    type: Number,
     required: true,
   },
 });
