@@ -9,10 +9,12 @@ var usersRouter = require('./routes/users');
 var sinhvienRouter= require('./routes/sinhVien')
 var gmailRouter= require('./routes/gmail');
 var uploadRouter = require('./routes/upload');
+var entriesRouter = require('./routes/entries');
 
 const mongoose = require(("mongoose"));
 require("./models/usermodles");
 require("./models/sinhVienModel");
+require("./models/entriesmodels");
 
 var app = express();
 
