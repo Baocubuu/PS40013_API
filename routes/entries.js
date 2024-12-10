@@ -19,7 +19,7 @@ router.get('/list', async (req, res) => {
       data: results,
     });
   } catch (error) {
-    console.error(error); // In lỗi ra console
+    console.error(error);
     res.status(500).json({
       success: false,
       message: 'Internal Server Error',
