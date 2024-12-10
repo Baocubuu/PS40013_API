@@ -1,20 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const entries = require('../models/entriesmodels'); // Đường dẫn model
+const entries = require('../models/entriesmodels');
 
-// Định nghĩa route
+// Câu 1
 router.get('/list', async (req, res) => {
   const { nationality, date } = req.query;
 
   try {
-    const people = await entries.find({
+    
+    const results = await entries.find({
       nationality: nationality,
-      entryCount: { $gte: parseInt(date) },
+      date: { $gte: parseInt(date) }, 
     });
 
+  
     res.status(200).json({
       success: true,
-      data: people,
+      data: results,
     });
   } catch (error) {
     console.error(error);
