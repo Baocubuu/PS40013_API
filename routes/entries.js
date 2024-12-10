@@ -11,7 +11,7 @@ mongoose
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
-// API lấy danh sách người nhập cảnh
+// Câu 1
 app.get('/list', async (req, res) => {
   const { nationality, date } = req.query;
   try {
@@ -30,9 +30,4 @@ app.get('/list', async (req, res) => {
       message: 'Internal Server Error',
     });
   }
-});
-
-// Khởi động server
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
 });
